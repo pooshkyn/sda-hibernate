@@ -38,16 +38,6 @@ public class UserRepositoryTest implements UserRepositoryAbility {
     }
 
     @Test
-    void testAddExampleUser() {
-        //when
-        userRepository.addExampleUser();
-        //then
-        Optional<User> actualUser = findUser("testuser");
-        assertTrue(actualUser.isPresent());
-        assertEquals(actualUser.get(), USER2);
-    }
-
-    @Test
     void testFindAllUsers() {
         //given
         addUsers();
